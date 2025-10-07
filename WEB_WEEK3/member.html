@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Member</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #d6d6d6;
+    }
+
+    header {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .member-list {
+      padding: 40px;
+      background-color: white;
+      width: 80%;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .member-item {
+      display: flex;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .member-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .member-item:last-child {
+      border-bottom: none;
+    }
+
+    .profile-pic {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin-right: 20px;
+    }
+
+    .member-info {
+      display: flex;
+      gap: 80px;
+      font-size: 18px;
+    }
+
+    .member-info div {
+      min-width: 120px;
+    }
+  </style>
+</head>
+<body>
+  <header>Data Member</header>
+
+  <div class="member-list">
+    <div class="member-item" data-name="Ilham" data-password="12345">
+      <div class="profile-pic"></div>
+      <div class="member-info">
+        <div>Ilham</div>
+        <div>088200684664</div>
+        <div>20</div>
+        <div>Cilacap</div>
+      </div>
+    </div>
+
+    <div class="member-item" data-name="Reyner" data-password="abcde">
+      <div class="profile-pic"></div>
+      <div class="member-info">
+        <div>Reyner</div>
+        <div>081234567890</div>
+        <div>21</div>
+        <div>Purwokerto</div>
+      </div>
+    </div>
+
+    <div class="member-item" data-name="Yehuda" data-password="98765">
+      <div class="profile-pic"></div>
+      <div class="member-info">
+        <div>Yehuda</div>
+        <div>082233445566</div>
+        <div>22</div>
+        <div>Banyumas</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const members = document.querySelectorAll('.member-item');
+
+    members.forEach(member => {
+      member.addEventListener('click', () => {
+        const name = member.getAttribute('data-name');
+        const password = member.getAttribute('data-password');
+        alert(`Nama: ${name}\nPassword: ${password}`);
+      });
+    });
+  </script>
+</body>
+</html>
