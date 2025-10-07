@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #dcdcdc;
+    }
+    header {
+  background-color: #c918b8;
+  text-align: left;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+nav {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 20px;
+}
+
+.image-box {
+  background-color: white;
+  width: 90%;
+  height: 400px;
+  margin: 30px auto;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+}
+
+.grid-container {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-image {
+  background-color: #000000;
+  height: 150px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden; 
+}
+
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.product-info {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  color: black;
+  height: fit-content;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.recommendation {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.recommendation .product-image {
+  height: 200px;
+  background-color: #b3b3b3;
+}
+
+.recommendation .product-info {
+  padding: 10px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    Toko Online
+  </header>
+
+  <nav>
+    <a href="admin.html">Admin</a>
+    <a href="member.html">Member</a>
+  </nav>
+
+  <div class="image-box">
+    <img src="images/hadinata-batik.jpg" alt="Gambar Produk">
+  </div>
+
+  <div class="content">
+    <div class="grid-container">
+      <div class="grid-item">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <p>Baju</p>
+          <p>Rp. 300.000</p>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <p>Jaket</p>
+          <p>Rp. 300.000</p>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <p>Kaos Kaki</p>
+          <p>Rp. 15.000</p>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <p>Sarung</p>
+          <p>Rp. 90.000</p>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <p>Topi</p>
+          <p>Rp. 70.000</p>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <p>Tas</p>
+          <p>Rp. 200.000</p>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <p>Sarung Tangan</p>
+          <p>Rp. 80.000</p>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <p>Jam Tangan</p>
+          <p>Rp. 500.000</p>
+        </div>
+      </div>
+    </div>
+
+<aside class="sidebar">
+  <h3>Rekomendasi</h3>
+  <div class="recommendation">
+    <div class="product-image"></div>
+    <div class="product-info">
+      <p>Batik Nusantara</p>
+      <p>Rp. 120.000</p>
+    </div>
+  </div>
+</aside>
+  </div>
+</body>
+</html>
